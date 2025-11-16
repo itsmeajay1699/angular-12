@@ -1,0 +1,13 @@
+<h1>Home Components</h1>
+
+<div class="grid">
+    <div *ngFor="let user of userData">
+        <div (click)="handleCardClick(user)" class="user-card">
+            <h2>{{ user.name }}</h2>
+            <p>Age: {{ user.age }}</p>
+            <p>Description: {{ user.desc }}</p>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

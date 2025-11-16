@@ -1,0 +1,38 @@
+header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header>div {
+    border-radius: 16px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #343a40;
+}
+
+header nav {
+    margin-top: 8px;
+}
+
+header nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
