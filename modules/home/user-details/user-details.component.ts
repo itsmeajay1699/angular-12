@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-details',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDetailsComponent implements OnInit {
 
-  constructor() { }
+  userData: any;
+
+  constructor(private route: Router) {
+    if (this.route.getCurrentNavigation()?.extras.state) {
+      this.userData = this.route.getCurrentNavigation()?.extras.state?.['userData'];
+    }
+  }
 
   ngOnInit(): void {
   }

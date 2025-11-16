@@ -1,0 +1,6 @@
+<div (click)="handleCardClick(user)" style="transition: background-color 2s; color: white;"
+    [ngStyle]="{'background-color': home===true ? 'green' : 'red'}" class="user-card">
+    <h2>{{ user?.name }}</h2>
+    <p>Age: {{ user?.age }}</p>
+    <p>Description: {{ user?.desc }}</p>
+</div>

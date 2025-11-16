@@ -1,13 +1,20 @@
 <h1>Home Components</h1>
 
-<div class="grid">
-    <div *ngFor="let user of userData">
-        <div (click)="handleCardClick(user)" class="user-card">
-            <h2>{{ user.name }}</h2>
-            <p>Age: {{ user.age }}</p>
-            <p>Description: {{ user.desc }}</p>
-        </div>
-    </div>
+<div *ngIf="loading" class="loading">
+    <h2>Loading...</h2>
 </div>
+
+<div *ngIf="!loading" class="grid" #gridTemplateColumns>
+    <div *ngFor="let user of userData; let i = index">
+        <app-user-card [user]="user" [home]="home"></app-user-card>
+    </div>
+    <!-- <h2>
+        {{length | number}} Cards Loaded
+    </h2> -->
+</div>
+
+<h1>
+    {{num}}
+</h1>
 
 <router-outlet></router-outlet>
